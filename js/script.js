@@ -4,6 +4,7 @@ const papanSkor = document.querySelector('.papan-skor');
 const pop = document.querySelector('#pop');
 const soundtrack = document.querySelector('#soundtrack');
 
+
 let tanahSebelumnya;
 let selesai;
 let highscore;
@@ -12,7 +13,7 @@ let skor;
 window.onload = function()
 {
   let scoreBrowser = localStorage.getItem("HighScore");
-  if (scoreBrowser != undefined) highscore = scoreBrowser;
+  if (scoreBrowser !== undefined) highscore = scoreBrowser;
   document.getElementById("HighScore").innerHTML = "HighScore: " + highscore;
 }
 
@@ -74,11 +75,10 @@ function pukul() {
   papanSkor.textContent = skor;
   this.parentNode.classList.remove('muncul');
 
-
-  if (skor > highscore) highscore = skor;
+  if(skor > highscore) highscore = skor;
   localStorage.setItem("HighScore", highscore);
   document.getElementById("HighScore").innerHTML = "HighScore: " + highscore;
-  
+
   pop.play();
  
   setTimeout(() => {
