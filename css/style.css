@@ -1,0 +1,144 @@
+html{
+  background: url(../img/villaangker.jpg)no-repeat center fixed;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  flex-direction: column;
+}
+
+
+.span{
+  font-family: sans-serif;
+}
+
+.label-highscore{
+  margin-left: 100px;
+  background-size: cover;
+  box-shadow: 0 14px 25px 0px #00000026;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: sans-serif;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.timmer{
+  margin-left: 20px;
+  background-size: cover;
+  box-shadow: 0 14px 25px 0px #00000026;
+  position: fixed;
+  right: 200px;
+  top: 100px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 15px;
+  font-family: sans-serif;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border-radius: 12px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2{
+  font-size: 60px;
+  text-align: center;
+  font-family: arial;
+  margin: 10px;
+  color: white;
+}
+
+button {
+  display: block;
+  margin: auto;
+}
+
+.card-item{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu1.png), auto;
+  display: flexbox;
+}
+
+.container:active {
+  cursor: url(../img/palu2.png), auto;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: '';
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/pocong2.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -15px;
+}
+
+@media screen and (max-width: 1000px){
+
+html{
+  min-width: fit-content;
+}
+.card{
+  width: 100%;
+}
+.timmer{
+  min-height: fit-content;
+  top: 30px;
+}
+.label-highscore{
+  min-width: fit-content;
+}
+.tanah{
+  justify-content: center;
+  display: flex;
+}
+}
+
